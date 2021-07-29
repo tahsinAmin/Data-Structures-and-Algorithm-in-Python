@@ -68,4 +68,30 @@ result = sum([k**2 for k in range(n)])
 print(result)
 """
 
+#  1.6) Write a short Python function that takes a positive integer n and returns
+# the sum of the squares of all the odd positive integers smaller than n.
+# &
+# 1.7) Give a single command that computes the sum from Exercise R-1.6, relying
+#  on Python’s comprehension syntax and the built-in sum function.
+"""
+n = int(input(''))
+result = sum([k**2 for k in range(n) if k%2 == 1])
+print(result)
+"""
+
+# 1.8) Python allows negative integers to be used as indices into a sequence, such as a
+#  string. If string s has length n, and expression s[k] is used for index
+#  −n ≤ k < 0, what is the equivalent index j ≥ 0 such that s[j] references the same element?
+"""
+index j is n-k in order to display the same item for index k
+s[k] == s[n-k]
+"""
+# 1.9) What parameters should be sent to the range constructor, to produce a range with
+# values 50, 60, 70, 80?
+"""
+l = [n for n in range(50,81,10)]
+print(l)
+"""
+
+#  For 1.9 to 1.11 => https://gist.github.com/vgratian/7508c636171de86e8857c4dc578ef757
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
