@@ -33,11 +33,11 @@ print(is_even(n))
 """
 def minmax(arr):
 	smallest = largest = arr[0]
-	
+
 	for i in arr:
 		smallest = i if i < smallest else smallest
 		largest = i if i > largest else largest
-	
+
 	return smallest, largest
 
 arr = [7,-4,-9,10,200]
@@ -49,12 +49,12 @@ print(minmax(arr))
 """
 def square_sum_all_pos_int_smaller_than_(n):
 	sum = 0
-	
+
 	for i in range(n):
 		sum += i**2
-	
+
 	return sum
-	
+
 n = int(input(''))
 result = square_sum_all_pos_int_smaller_than_(n)
 print(result)
@@ -93,5 +93,46 @@ l = [n for n in range(50,81,10)]
 print(l)
 """
 
-#  For 1.9 to 1.11 => https://gist.github.com/vgratian/7508c636171de86e8857c4dc578ef757
+# 1.10) What parameters should be sent to the range constructor, to produce a
+# range with values 8, 6, 4, 2, 0, −2, −4, −6, −8?
+"""print([n for n in range(8,-9,-2)])"""
+
+# 1.11) Demonstrate how to use Python’s list comprehension syntax to produce
+# the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
+"""
+lst = [2**n for n in range(0, 9)]
+print(lst)
+"""
+
+# 1.12 Python’s random module includes a function choice(data) that returns a
+# random element from a non-empty sequence. The random module in-
+# cludes a more basic function randrange, with parameterization similar to
+# the built-in range function, that return a random choice from the given
+# range. Using only the randrange function, implement your own version
+# of the choice function.
+"""
+from random import choice, randrange
+
+print(randrange(5,25,5))
+# l = [5, 10, 15, 20, 25]
+# print(choice(l))
+"""
+
+# 1.13 C-1.13 Write a pseudo-code description of a function that reverses a list of n
+# integers, so that the numbers are listed in the opposite order than they
+# were before, and compare this method to an equivalent Python function
+# for doing the same thing.
+"""
+function(list1):
+	list2 = []
+	for each item, i in list1:
+		list2.append(list1[i])
+	
+	return list2
+
+	**Now I need to check witgh the real one
+
+"""
+
+#  For 1.12 => https://gist.github.com/vgratian/e4628f72dd380e0fbe18a7e9178c0312
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
