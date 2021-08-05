@@ -118,7 +118,7 @@ print(randrange(5,25,5))
 # print(choice(l))
 """
 
-# 1.13 C-1.13 Write a pseudo-code description of a function that reverses a list of n
+# C-1.13 Write a pseudo-code description of a function that reverses a list of n
 # integers, so that the numbers are listed in the opposite order than they
 # were before, and compare this method to an equivalent Python function
 # for doing the same thing.
@@ -129,10 +129,33 @@ function(list1):
 		list2.append(list1[i])
 	
 	return list2
-
 	**Now I need to check witgh the real one
 
+---
+
+list1.reverse()
+print(list1)
 """
 
-#  For 1.12 => https://gist.github.com/vgratian/e4628f72dd380e0fbe18a7e9178c0312
+# C-1.14 Write a short Python function that takes a sequence of integer values and
+# determines if there is a distinct pair of numbers in the sequence whose
+# product is odd.
+"""
+def product_odd(l):
+    n = len(l)
+    for i in range(n):
+    	for j in range(n):
+    		if (i != j and i*j % 2 == 1):
+    			yield(i,j)
+    			# print("Pair for", i, j)
+    		j+=1
+
+l = [0, 1, 2, 3, 4,5,6,7,8,9,10]
+gen = product_odd(l)
+for item in gen:
+	print(item)
+"""
+
+
+# https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
