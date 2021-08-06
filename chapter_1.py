@@ -156,6 +156,35 @@ for item in gen:
 	print(item)
 """
 
+# C-1.15 Write a Python function that takes a sequence of numbers and determines
+# if all the numbers are different from each other (that is, they are distinct).
+"""
+def all_unique(array):
+    number_set = set()
+    for number in array:
+        if number in number_set: return False
+        else: number_set.add(number)
+    return True
 
+data = [1,2,3,4,5,6]; print (all_unique(data))
+data = [1,2,3,3,5,6]; print (all_unique(data))
+data = []; print (all_unique(data))
+"""
+
+# C-1.16 In our implementation of the scale function (page 25), the body of the loop
+# executes the command data[j] = factor. We have discussed that numeric
+# types are immutable, and that use of the = operator in this context causes
+# the creation of a new instance (not the mutation of an existing instance).
+# How is it still possible, then, that our implementation of scale changes the
+# actual parameter sent by the caller?
+"""print('\nLists are mutable, so what changes in the list are the references to new, immutable objects.\n\nIn other words, scaling creates a new object, but its reference is stored in the original list structure\n')"""
+
+"""
+def scale(data, factor):
+	for val in data:
+		val *= factor
+		
+scale([1,2,4,6],8)
+"""
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
