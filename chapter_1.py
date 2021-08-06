@@ -179,12 +179,28 @@ data = []; print (all_unique(data))
 # actual parameter sent by the caller?
 """print('\nLists are mutable, so what changes in the list are the references to new, immutable objects.\n\nIn other words, scaling creates a new object, but its reference is stored in the original list structure\n')"""
 
+# C-1.17 Had we implemented the scale function (page 25) as follows, does it work properly?
+# def scale(data, factor):
+# for val in data:
+# val = factor
+# Explain why or why not
 """
 def scale(data, factor):
-	for val in data:
-		val *= factor
-		
-scale([1,2,4,6],8)
+    for val in data:
+        val *= factor
+print('Bad scaling')
+
+data = [1,2,3,4,5]; print (data)
+scale(data, 5); print (data)
+
+def realscale(data, factor):
+    #data*=factor #This will concatenate the array with itself multiple times!  
+    for i in range (len(data)):
+        data[i]*=factor
+
+print ('\nGood scaling')
+data = [1,2,3,4,5]; print (data)
+realscale(data, 5); print (data)
 """
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
