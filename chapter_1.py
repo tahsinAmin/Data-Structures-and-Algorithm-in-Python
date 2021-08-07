@@ -202,5 +202,13 @@ print ('\nGood scaling')
 data = [1,2,3,4,5]; print (data)
 realscale(data, 5); print (data)
 """
+
+# Demonstrate how to use Python’s list comprehension syntax to produce
+# the list [0, 2, 6, 12, 20, 30, 42, 56, 72, 90].
+"""
+print([a * (a + 1) for a in range(10)])
+"""
+
+# https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
