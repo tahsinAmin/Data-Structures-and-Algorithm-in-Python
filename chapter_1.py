@@ -209,6 +209,47 @@ realscale(data, 5); print (data)
 print([a * (a + 1) for a in range(10)])
 """
 
+# C-1.19 Demonstrate how to use Python’s list comprehension syntax to produce
+# the list [ a , b , c , ..., z ], but without having to type all 26 such
+# characters literally.
+"""
+print([chr(a) for a in range(ord('a'), ord('z') + 1)])
+"""
+
+# C-1.20 Python’s random module includes a function shuffle(data) that accepts a
+# list of elements and randomly reorders the elements so that each possible order occurs with equal probability. The random module includes a
+# more basic function randint(a, b) that returns a uniformly random integer
+# from a to b (including both endpoints). Using only the randint function,
+# implement your own version of the shuffle function.
+"""
+def my_shuffle(data):
+	from random import randint
+	for i in range(len(data)):
+		m = randint(0, len(data) - 1)
+		n = randint(0, len(data) - 1)
+		data[m], data[n] = data[n], data[m]
+
+if __name__ == '__main__':
+	a = [i for i in range(10)]
+	print('initial list:',a)
+	
+	for i in range(10):
+		my_shuffle(a)
+		print('shuffled:',a)
+"""
+
+"""
+a=[]
+while True:
+	try:
+		n = int(input())
+		a.append(n)
+	except(EOFError):
+		print("hello")
+		
+"""
+
+
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
