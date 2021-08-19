@@ -254,6 +254,33 @@ a.reverse()
 [print(i) for i in a]
 """
 
+# C-1.22 Write a short Python program that takes two arrays a and b of length n
+# storing int values, and returns the dot product of a and b. That is, it returns
+# an array c of length n such that c[i] = a[i] · b[i], for i = 0,...,n−1.
+"""
+def dots(a,b):
+	assert len(a) == len(b)
+	return [a[i] * b[i] for i in range(len(a))]
+	
+a = [1,2,3]
+b = [1,2,3]
+c = dots(a,b)
+print(c)
+"""
+
+# C-1.23 Give an example of a Python code fragment that attempts to write an element to a list based on an index that may be out of bounds. If that index
+# is out of bounds, the program should catch the exception that results, and
+# print the following error message:
+# “Don’t try buffer overflow attacks in Python!"
+"""
+a = [1,2,3]
+try:
+	a[len(a)] = 5
+except IndexError as error:
+	print("Don’t try buffer overflow attacks in Python!")
+print(a)
+"""
+
 
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
