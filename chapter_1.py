@@ -281,7 +281,30 @@ except IndexError as error:
 print(a)
 """
 
+# C-1.24 Write a short Python function that counts the number of vowels in a given
+# character string.
+"""
+s='Encyclopedia'
+c=0
 
+for i in s:
+	c+= 1 if i in 'AEIOUaeiou' else 0
+
+print(c)
+"""
+
+# C-1.25 Write a short Python function that takes a string s, representing a sentence,
+# and returns a copy of the string with all punctuation removed. For example, if given the string "Let s try, Mike.", this function would return
+# "Lets try Mike"
+"""
+def removePunct(s):
+	return ''.join(x for x in s if x.isspace() or x.isalnum())
+
+s= "I'd have done it by now!!"
+print(removePunct(s))
+"""
+
+# file:///C:/Users/User/Downloads/Documents/Data%20Structures%20and%20Algorithms%20in%20Python%20(%20PDFDrive%20).pdf
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
 # https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
