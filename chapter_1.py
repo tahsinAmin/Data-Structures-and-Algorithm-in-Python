@@ -304,6 +304,18 @@ s= "I'd have done it by now!!"
 print(removePunct(s))
 """
 
+# C-1.26 Write a short program that takes as input three integers, a, b, and c, from
+# the console and determines if they can be used in a correct arithmetic
+# formula (in the given order), like “a+b = c,” “a = b−c,” or “a ∗ b = c.”
+"""
+if __name__ == '__main__':
+	s = input().split()
+	a, b, c = (int(i) for i in s)
+	print('Is {} + {} = {}?'.format(a, b, c), a + b == c)
+	print('Is {} = {} - {}?'.format(a, b, c), a == b - c)
+	print('Is {} = {} * {}?'.format(a, b, c), a == b * c)
+"""
+
 # file:///C:/Users/User/Downloads/Documents/Data%20Structures%20and%20Algorithms%20in%20Python%20(%20PDFDrive%20).pdf
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
