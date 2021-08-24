@@ -338,6 +338,28 @@ def norm(v,p):
 norm([3,4],2)
 """
 
+# P-1.29 Write a Python program that outputs all possible strings formed by using
+# the characters c , a , t , d , o , and g exactly once.
+#  Example: https://www.youtube.com/watch?v=QI9EczPQzPQ
+"""if __name__ == '__main__':
+    from itertools import permutations
+    s = 'catdog'
+    for i in range(len(s)):
+        for x in permutations(s, i + 1):
+            print(''.join(x))"""
+
+# P-1.30 Write a Python program that can take a positive integer greater than 2 as
+# input and write out the number of times one must repeatedly divide this
+# number by 2 before getting a value less than 2.
+"""
+from math import floor, log2
+
+if __name__ == '__main__':
+	n = int(input("input an integer: \n"))
+	assert n > 2
+	print("Need {} times to divide".format(int(floor(log2(n)))))
+"""
+
 # file:///C:/Users/User/Downloads/Documents/Data%20Structures%20and%20Algorithms%20in%20Python%20(%20PDFDrive%20).pdf
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
