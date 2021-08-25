@@ -360,6 +360,27 @@ if __name__ == '__main__':
 	print("Need {} times to divide".format(int(floor(log2(n)))))
 """
 
+# P-1.31 Write a Python program that can “make change.” Your program should
+# take two numbers as input, one that is a monetary amount charged and the
+# other that is a monetary amount given. It should then return the number
+# of each kind of bill and coin to give back as change for the difference
+# between the amount given and the amount charged. The values assigned
+# to the bills and coins can be based on the monetary system of any current
+# or former government. Try to design your program so that it returns as
+# few bills and coins as possible.
+"""
+charge, given = map(float, input().split())
+# print(charge, given)
+dif = (given - charge)
+if dif == int(dif):
+	print("yes")
+	print("Change:", dif)
+else: 
+	print("no")
+	refined = int((dif - int(dif))*100)
+	print("Change:", int(dif), "Taka &", refined, "Paisha")
+"""
+
 # file:///C:/Users/User/Downloads/Documents/Data%20Structures%20and%20Algorithms%20in%20Python%20(%20PDFDrive%20).pdf
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
 # https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
