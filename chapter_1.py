@@ -378,10 +378,27 @@ if dif == int(dif):
 else: 
 	print("no")
 	refined = int((dif - int(dif))*100)
-	print("Change:", int(dif), "Taka &", refined, "Paisha")
+	print("Change: %s Taka & %s Paisha" %(int(dif),refined))
+
 """
+
+
+"""
+from random import randrange
+list_of_typos = [
+	"Ai will never spam my friends again.",
+	"I well never spam my friends again.",
+	"I will nver spam my friends again.",
+	"I will never spem my friends again.",
+	"I will never spam mi friends again.",
+	"I will never spam my frends again.",
+	"I will never spam my friends agen.",
+	"I will never spam my friends again.",
+	]
+	
+[print(list_of_typos[randrange(0,8)]) for i in range(100)]
+"""
+
 
 # file:///C:/Users/User/Downloads/Documents/Data%20Structures%20and%20Algorithms%20in%20Python%20(%20PDFDrive%20).pdf
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
-# https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python/blob/master/Chapter%201%20Exercises.ipynb
-# https://github.com/RichardAfolabi/Data-Structures-Algorithms-in-Python/blob/master/chp_one_python_primer.py
