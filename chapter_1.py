@@ -399,6 +399,21 @@ list_of_typos = [
 [print(list_of_typos[randrange(0,8)]) for i in range(100)]
 """
 
+"""
+s = input()
+list_of_words = s.split()
+print(list_of_words)
+
+dict = {}
+for word in list_of_words:
+	if word in dict:
+		print(True)
+	else:
+		dict[word] = 1
+
+print(dict)
+"""
+
 
 # file:///C:/Users/User/Downloads/Documents/Data%20Structures%20and%20Algorithms%20in%20Python%20(%20PDFDrive%20).pdf
 # https://github.com/findmyway/Data-Structures-and-Algorithms-in-Python/tree/master/ch1
