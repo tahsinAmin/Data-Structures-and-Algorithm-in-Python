@@ -382,7 +382,10 @@ else:
 
 """
 
-
+# P-1.34 A common punishment for school children is to write out a sentence multiple times. Write a Python stand-alone program that will write out the
+# following sentence one hundred times: “I will never spam my friends
+# again.” Your program should number each of the sentences and it should
+# make eight different random-looking typos.
 """
 from random import randrange
 list_of_typos = [
@@ -399,6 +402,9 @@ list_of_typos = [
 [print(list_of_typos[randrange(0,8)]) for i in range(100)]
 """
 
+# P-1.36 Write a Python program that inputs a list of words, separated by whitespace, and outputs how many times each word appears in the list. You
+# need not worry about efficiency at this point, however, as this topic is
+# something that will be addressed later in this book
 """
 s = input()
 list_of_words = s.split()
